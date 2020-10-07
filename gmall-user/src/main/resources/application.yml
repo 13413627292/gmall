@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/gmall?characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+
+# mybtais配置
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    #springboot整合mybatis打印sql语句
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#端口
+server:
+  port: 8080
+#通用mpper
+mapper:
+  identity: mysql
