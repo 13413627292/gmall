@@ -1,4 +1,4 @@
-package com.myself.gmalluser.pojo;
+package com.gmall.api.bean;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;

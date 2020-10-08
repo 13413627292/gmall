@@ -1,8 +1,8 @@
-package com.myself.gmalluser.mapper;
+package com.myself.gmall.user.mapper;
 
-import com.myself.gmalluser.pojo.UmsMember;
+
+import com.gmall.api.bean.UmsMember;
 import tk.mybatis.mapper.common.Mapper;
-
 
 /**
  * @description:

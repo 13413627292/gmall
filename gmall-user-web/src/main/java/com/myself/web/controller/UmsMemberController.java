@@ -1,8 +1,9 @@
-package com.myself.gmalluser.controller;
+package com.myself.web.controller;
 
-import com.myself.gmalluser.pojo.UmsMember;
-import com.myself.gmalluser.pojo.UmsMemberReceiveAddress;
-import com.myself.gmalluser.service.IUmsMemberservice;
+import com.alibaba.dubbo.config.annotation.Reference;
+import com.gmall.api.bean.UmsMember;
+import com.gmall.api.bean.UmsMemberReceiveAddress;
+import com.gmall.api.service.IUmsMemberservice;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -18,7 +19,7 @@ import java.util.List;
  **/
 @Controller
 public class UmsMemberController {
-    @Autowired
+    @Reference
     IUmsMemberservice umsMemberservice;
 
    @RequestMapping("/index")
@@ -36,7 +37,7 @@ public class UmsMemberController {
 
     @RequestMapping("/getAddressByMemberId")
     @ResponseBody
-    public Object getAddressByMemberId(@RequestBody String memberId){
+    public Object getAddressByMemberId( String memberId){
         List<UmsMemberReceiveAddress> addressList = umsMemberservice.getAdressByMemberId(memberId);
         return addressList;
     }

@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/gmall?characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+  #dubbo配置
+  dubbo:
+    application: user-service #dubbo的服务名称
+    protocol:
+      name: dubbo #dubbo通信协议名称
+    registry:
+      address: 192.168.110.133:2181 #zookeeper注册中心地址
+      protocol: zookeeper #zookeeper通信协议名称
+    base-package: com.myself.gmall #dubbo的服务扫描路径
+
+# mybtais配置
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    #springboot整合mybatis打印sql语句
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#端口
+server:
+  port: 8070
+#通用mpper
+mapper:
+  identity: mysql
+
+

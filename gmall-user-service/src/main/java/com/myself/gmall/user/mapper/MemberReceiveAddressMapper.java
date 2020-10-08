@@ -1,6 +1,7 @@
-package com.myself.gmalluser.mapper;
+package com.myself.gmall.user.mapper;
 
-import com.myself.gmalluser.pojo.UmsMemberReceiveAddress;
+
+import com.gmall.api.bean.UmsMemberReceiveAddress;
 import tk.mybatis.mapper.common.Mapper;
 
 /**
